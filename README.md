@@ -1,6 +1,6 @@
 # CozaStore Web Sitesi Projesi
 
-Bu proje, Kocaeli Üniversitesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği Bölümü'nün **TBL303: Web Tasarımı** dersi kapsamında geliştirilmiştir. Proje, **CozaStore** adlı bir avize satış mağazasının çevrimiçi varlığını güçlendirmek amacıyla tasarlanmış bir e-ticaret web sitesidir.
+Bu proje, **CozaStore** adlı bir avize satış mağazasının çevrimiçi varlığını güçlendirmek amacıyla tasarlanmış bir e-ticaret web sitesidir.
 
 ## Proje Özeti
 
@@ -68,26 +68,11 @@ Projenin geliştirilmesinde aşağıdaki teknolojiler ve araçlar kullanılmış
 
 ---
 
-## Geliştirici Bilgileri
-
-- **İsim**: Gülsüm Demir  
-- **Bölüm**: Bilişim Sistemleri Mühendisliği  
-- **Üniversite**: Kocaeli Üniversitesi  
-- **İletişim**: [demirr.gulsumm@gmail.com](mailto:demirr.gulsumm@gmail.com)
-
----
-
 ## Kaynaklar
 
 - [Free HTML5 E-commerce Template](https://themewagon.com/themes/free-html5-ecommerce-website-template/)
 - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [W3Schools Chart.js Guide](https://www.w3schools.com/ai/ai_chartjs.asp2.0)
 - [IKEA Aydınlatma Ürünleri](https://www.ikea.com.tr/kategori/aydinlatma)
-
----
-
-## Lisans
-
-Bu proje eğitim amaçlı olarak hazırlanmıştır.
 
 ---
