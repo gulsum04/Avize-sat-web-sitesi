@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>Diğer Düzenlemeler</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/iconic/css/material-design-iconic-font.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/linearicons-v1.0.0/icon-font.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/css-hamburgers/hamburgers.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/animsition/css/animsition.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/select2/select2.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/daterangepicker/daterangepicker.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/MagnificPopup/magnific-popup.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--===============================================================================================-->
+  </head>
+
+  <style>
+    .border {
+      background: linear-gradient(#f8ffff, #d5e3ff, #e8f6ff);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bor8 {
+      margin-bottom: 20px;
+    }
+
+    .actions button {
+      margin: 0 5px;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .actions .edit {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .actions .delete {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+
+  <body class="animsition">
+    <div class="col-md-8 p-b-200 m-tb-100 m-lr-auto">
+      <div class="border txt-center m-t-50">
+        <h2 class="txt-center ltext-102 m-t-70 m-b-50">
+         Diğer Düzenlemeler
+        </h2>
+
+       <!-- Diğer Düzenlemeler Formu -->
+<form id="aboutForm">
+    <div class="bor8 how-pos4-parent">
+      <textarea
+        class="stext-111 cl2 plh3 size-116 p-l-10 p-r-30 p-t-13"
+        id="story"
+        rows="4"
+        placeholder="Hikayemiz"
+        required
+      ></textarea>
+    </div>
+  
+    <div class="bor8 how-pos4-parent">
+      <textarea
+        class="stext-111 cl2 plh3 size-116 p-l-10 p-r-30 p-t-13"
+        id="mission"
+        rows="4"
+        placeholder="Misyon"
+        required
+      ></textarea>
+    </div>
+  
+    <div class="bor8 how-pos4-parent">
+      <textarea
+        class="stext-111 cl2 plh3 size-116 p-l-10 p-r-30 p-t-13"
+        id="vision"
+        rows="4"
+        placeholder="Vizyon"
+        required
+      ></textarea>
+    </div>
+  
+    <button
+      type="submit"
+      class="flex-c-m stext-101 cl0 m-lr-auto size-101 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer"
+    >
+      Kaydet
+    </button>
+  </form>
+  
+  <!-- Düzenlemeler Listesi -->
+  <div id="aboutList" style="margin-top: 30px"></div>
+  
+  <!-- Back to top -->
+  <div class="btn-back-to-top" id="myBtn">
+    <span class="symbol-btn-back-to-top">
+      <i class="zmdi zmdi-chevron-up"></i>
+    </span>
+  </div>
+  
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+      <span class="symbol-btn-back-to-top">
+        <i class="zmdi zmdi-chevron-up"></i>
+      </span>
+    </div>
+
+    <script>
+      document.getElementById("aboutForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const story = document.getElementById("story").value.trim();
+  const mission = document.getElementById("mission").value.trim();
+  const vision = document.getElementById("vision").value.trim();
+
+  if (story && mission && vision) {
+    const aboutItem = document.createElement("div");
+    aboutItem.classList.add("about-item");
+    aboutItem.style.marginBottom = "20px";
+    aboutItem.innerHTML = `
+      <h3><strong>Hikayemiz:</strong></h3>
+      <p>${story}</p>
+      <h3><strong>Misyon:</strong></h3>
+      <p>${mission}</p>
+      <h3><strong>Vizyon:</strong></h3>
+      <p>${vision}</p>
+      <div class="actions">
+        <button class="edit" style="background-color: #28a745; color: white; border-radius: 5px; padding: 5px 10px;">Düzenle</button>
+        <button class="delete" style="background-color: #dc3545; color: white; border-radius: 5px; padding: 5px 10px;">Sil</button>
+      </div>
+    `;
+
+    // Bilgileri listeye ekle
+    document.getElementById("aboutList").appendChild(aboutItem);
+
+    // Formu temizle
+    document.getElementById("aboutForm").reset();
+
+    // Sil butonuna olay ekle
+    const deleteButton = aboutItem.querySelector(".delete");
+    deleteButton.addEventListener("click", function () {
+      aboutItem.remove();
+    });
+
+    // Düzenle butonuna olay ekle
+    const editButton = aboutItem.querySelector(".edit");
+    editButton.addEventListener("click", function () {
+      document.getElementById("story").value = story;
+      document.getElementById("mission").value = mission;
+      document.getElementById("vision").value = vision;
+      aboutItem.remove();
+    });
+  } else {
+    alert("Lütfen tüm alanları doldurun.");
+  }
+});
+
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+      $(".js-select2").each(function () {
+        $(this).select2({
+          minimumResultsForSearch: 20,
+          dropdownParent: $(this).next(".dropDownSelect2"),
+        });
+      });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/parallax100/parallax100.js"></script>
+    <script>
+      $(".parallax100").parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(".gallery-lb").each(function () {
+        // the containers for all your galleries
+        $(this).magnificPopup({
+          delegate: "a", // the selector for gallery item
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+          mainClass: "mfp-fade",
+        });
+      });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script>
+      $(".js-addwish-b2").on("click", function (e) {
+        e.preventDefault();
+      });
+
+      $(".js-addwish-b2").each(function () {
+        var nameProduct = $(this).parent().parent().find(".js-name-b2").html();
+        $(this).on("click", function () {
+          swal(nameProduct, "Favorilere eklendi!", "success");
+
+          $(this).addClass("js-addedwish-b2");
+          $(this).off("click");
+        });
+      });
+
+      $(".js-addwish-detail").each(function () {
+        var nameProduct = $(this)
+          .parent()
+          .parent()
+          .parent()
+          .find(".js-name-detail")
+          .html();
+
+        $(this).on("click", function () {
+          swal(nameProduct, "Favorilere eklendi!", "success");
+
+          $(this).addClass("js-addedwish-detail");
+          $(this).off("click");
+        });
+      });
+
+      /*---------------------------------------------*/
+
+      $(".js-addcart-detail").each(function () {
+        var nameProduct = $(this)
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .find(".js-name-detail")
+          .html();
+        $(this).on("click", function () {
+          swal(nameProduct, "Sepete eklendi!", "success");
+        });
+      });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+      $(".js-pscroll").each(function () {
+        $(this).css("position", "relative");
+        $(this).css("overflow", "hidden");
+        var ps = new PerfectScrollbar(this, {
+          wheelSpeed: 1,
+          scrollingThreshold: 1000,
+          wheelPropagation: false,
+        });
+
+        $(window).on("resize", function () {
+          ps.update();
+        });
+      });
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
