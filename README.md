@@ -61,11 +61,13 @@ Projenin geliştirilmesinde aşağıdaki teknolojiler ve araçlar kullanılmış
    ![Ana Sayfa](screenshots/anasayfa.png)
 
 2. **Ürün Sayfası**  
-   ![Ürün Sayfası](screenshots/urunsayfasi.png)
+   ![Ürün Sayfası](screenshots/ürünler.png)
 
-3. **Admin Paneli**  
-   ![Admin Paneli](screenshots/adminpaneli.png)
-
+3. **Sepet Sayfası**  
+   ![Admin Paneli](screenshots/sepet.png)
+   
+4. **Admin Paneli**  
+   ![Admin Paneli](screenshots/admin_paneli.png)
 ---
 
 ## Kaynaklar
