@@ -13,7 +13,7 @@ CozaStore web sitesi, kullanıcıların avize ürünlerini kolayca görüntüley
 - **Blog Sayfası**: Avize ve aydınlatma konularında içerikler.
 - **Birimlerimiz Sayfası**: Müşteri hizmetleri ve insan kaynakları bölümleri.
 - **İletişim Sayfası**: İletişim formu ve Google Maps entegrasyonu.
-- **Admin Paneli**: Ürün ve duyuru ekleme, veri yönetimi.
+- **Admin Paneli**: Ürün, duyuru ve blog ekleme, veri yönetimi, istatiksel bilgiler.
 
 ---
 
